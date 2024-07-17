@@ -7,11 +7,11 @@ function accountManagement() { //make an account with admin privileges
         var loginOrCreate = loginOrCreate.toLowerCase();
         if (loginOrCreate == "login") {
             accountManaging = False;
-            window.location.replace("http://necroticphantom.github.io/To-Do-List/login");
+            window.location.replace("http://necroticphantom.github.io/To-Do-List/login"); //change - to %20 (space)???
         }
         else if (loginOrCreate == "create" || loginOrCreate == "create account") {
             accountManaging = False;
-            window.location.replace("http://necroticphantom.github.io/To-Do-List/create-account");
+            window.location.replace("http://necroticphantom.github.io/To-Do-List/create-account"); //change - to %20 (space)???
         }
         else {
             windom.alert("INVALID INPUT");
@@ -19,10 +19,10 @@ function accountManagement() { //make an account with admin privileges
     };
 };
 const CurrentURL = window.location
-if (CurrentURL == "https://necroticphantom.github.io/To-Do-List/create-account") {
+if (CurrentURL == "https://necroticphantom.github.io/To-Do-List/create-account") { //change - to %20 (space)???
     document.getElementById("signUpSubmit").addEventListener("click", signUp);
 }
-else if (currentURL == "https://necroticphantom.github.io/To-Do-List/login") {
+else if (currentURL == "https://necroticphantom.github.io/To-Do-List/login") { //change - to %20 (space)???
     document.getElementById("loginSubmit").addEventListener("click", login);
 };
 function signUp() {
