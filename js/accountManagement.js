@@ -1,4 +1,7 @@
 //make sure local storage works
+window.onload = Start() {
+    accountManagement();
+};
 function accountManagement() { //make an account with admin privileges
     accountManaging = True;
     while (accountManaging) {
