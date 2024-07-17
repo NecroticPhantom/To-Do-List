@@ -68,9 +68,3 @@ function login() {
         };
     };
 };
-
-//old shit for copying
-var newUsername = window.prompt("Username: ");
-    var newPassword = window.prompt("Password: ");
-    const loginDetails = {username: newUsername, password: newPassword};
-    const newUser = JSON.stringify(loginDetails);
