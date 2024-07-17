@@ -1,5 +1,5 @@
-//make some accounts have admin priviledges
-function accountManagment() {
+//make sure local storage works
+function accountManagment() { //make an account with admin privileges
     accountManaging = True;
     while (accountManaging) {
         let loginOrCreate = window.prompt("Login or Create Account? ");
