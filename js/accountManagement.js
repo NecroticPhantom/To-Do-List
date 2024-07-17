@@ -1,7 +1,7 @@
 //make sure local storage works
 window.onload = accountManagement();
 function accountManagement() { //make an account with admin privileges
-    accountManaging = True;
+    accountManaging = true;
     while (accountManaging) {
         var loginOrCreate = window.prompt("Login or Create Account? ");
         var loginOrCreate = loginOrCreate.toLowerCase();
@@ -26,7 +26,7 @@ else if (currentURL == "https://necroticphantom.github.io/To-Do-List/login") { /
     document.getElementById("loginSubmit").addEventListener("click", login);
 };
 function signUp() {
-    signingUp = True
+    signingUp = true
     while (signingUp) { //make sure email is valid before adding newUserDetails and the rest of the while loop
         let newEmail = document.getElementById("newEmailInput");
         let newUsername = docuemnt.getElementById("newUsernameInput");
@@ -42,7 +42,7 @@ function signUp() {
     };
 };
 function login() {
-    loggingIn = True;
+    loggingIn = true;
     while (logginIn) {
         let email = document.getElementById("emailInput");
         let username = document.getElementById("usernameInput");
