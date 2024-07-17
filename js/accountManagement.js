@@ -5,8 +5,8 @@ window.onload = Start() {
 function accountManagement() { //make an account with admin privileges
     accountManaging = True;
     while (accountManaging) {
-        let loginOrCreate = window.prompt("Login or Create Account? ");
-        let loginOrCreate = loginOrCreate.toLowerCase();
+        var loginOrCreate = window.prompt("Login or Create Account? ");
+        var loginOrCreate = loginOrCreate.toLowerCase();
         if (loginOrCreate = "login") {
             accountManaging = False;
             window.location.replace("http://necroticphantom.github.io/To-Do-List/login");
