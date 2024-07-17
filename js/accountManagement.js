@@ -6,11 +6,11 @@ function accountManagement() { //make an account with admin privileges
         var loginOrCreate = window.prompt("Login or Create Account? ");
         var loginOrCreate = loginOrCreate.toLowerCase();
         if (loginOrCreate == "login") {
-            accountManaging = False;
+            accountManaging = false;
             window.location.replace("http://necroticphantom.github.io/To-Do-List/login"); //change - to %20 (space)???
         }
         else if (loginOrCreate == "create" || loginOrCreate == "create account") {
-            accountManaging = False;
+            accountManaging = false;
             window.location.replace("http://necroticphantom.github.io/To-Do-List/create-account"); //change - to %20 (space)???
         }
         else {
@@ -34,7 +34,7 @@ function signUp() {
         const newUserDetails = {email: newEmail, username: newUsername, password: newPassword};
         const newUser = JSON.stringify(userDetails);
         localstorage.setItem(newUsername, newUser);
-        loggingIn = False;
+        loggingIn = false;
         const currentUser = userInfo.username;
         const currentUserPassword = userInfo.password;
         const currentUserEmail = userInfo.email;
@@ -61,7 +61,7 @@ function login() {
             window.alert("INVALID EMAIL");
         }
         else {
-            loggingIn = False;
+            loggingIn = false;
             const currentUser = userInfo.username;
             const currentUserPassword = userInfo.password;
             const currentUserEmail = userInfo.email;
