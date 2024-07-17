@@ -1,5 +1,8 @@
 //make sure local storage works
-window.onload = accountManagement();
+const userSignedIn = false;
+if (userSignedIn = false) {
+    window.onload = accountManagement();
+};
 function accountManagement() { //make an account with admin privileges
     accountManaging = true;
     while (accountManaging) {
@@ -38,6 +41,7 @@ function signUp() {
         const currentUser = userInfo.username;
         const currentUserPassword = userInfo.password;
         const currentUserEmail = userInfo.email;
+        const userSignedIn = true;
         window.location.replace("http://necroticphantom.github.io/To-Do-List");
     };
 };
@@ -65,6 +69,7 @@ function login() {
             const currentUser = userInfo.username;
             const currentUserPassword = userInfo.password;
             const currentUserEmail = userInfo.email;
+            const userSignedIn = true;
             window.location.replace("http://necroticphantom.github.io/To-Do-List");
         };
     };
