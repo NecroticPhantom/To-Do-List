@@ -70,7 +70,8 @@ function login() {
         };
     };
 };
-if (userInfo !== null) {
+let userCheck = localstorage.getItem(username);
+if (userCheck !== null) {
     const currentUser = userInfo.username;
     const currentUserPassword = userInfo.password;
     const currentUserEmail = userInfo.email;
