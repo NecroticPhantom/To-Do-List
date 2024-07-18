@@ -71,8 +71,8 @@ function login() {
         };
     };
 };
-var userAuth = document.getElementById("Welcome").innerHTML;
-if (userAuth == null) {
+var userAuth = document.getElementById("Welcome").textContent;
+if (userAuth != null) {
     const currentUser = userInfo.username;
     const currentUserPassword = userInfo.password;
     const currentUserEmail = userInfo.email;
