@@ -3,17 +3,18 @@
     <head>
         <link rel="stylesheet" href="css/accountManagement.css">
         <script src="js/accountManagement.js"></script>
+        <script src="js/passwordProtection.js"></script>
         <title>Account Creation</title>
     </head>
     <body>
         <label for="Email">Email</label>
-        <input type="text" id="newEmailInput" name="email" placeholder="Email">
+        <input class="emailInput" id="newEmailInput" placeholder="Email">
           
         <label for="Username">Username</label>
-        <input type="text" id="newUsernameInput" name="uername" placeholder="Username">
+        <input class="usernameInput" id="newUsernameInput" placeholder="Username">
 
         <label for="Password">Password</label>
-        <input type="password" id="newPasswordInput" name="password" placeholder="Password">
+        <input class="passwordInput" id="newPasswordInput" placeholder="Password">
           
         <button class="submitButton" id="createAccountButton">
             <p class="submitText" id="createAccountText">Create Account</p>

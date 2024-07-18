@@ -1,5 +1,5 @@
 //local storage not working
-//encrypt password before storing???
+//replace visual password masking inputs with proper form and post method + hashing to fully secure data (this can wait as this is just a To-Do list website, securtiy isn't even neccessary)
 const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const currentURL = window.location
 var userSignedIn = false;
