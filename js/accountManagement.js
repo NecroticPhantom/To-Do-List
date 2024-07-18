@@ -22,8 +22,8 @@ function accountManagement() { //make an account with admin privileges
         };
     };
 };
-const CurrentURL = window.location
-if (CurrentURL == "https://necroticphantom.github.io/To-Do-List/create-account") { //change - to %20 (space)???
+const currentURL = window.location
+if (currentURL == "https://necroticphantom.github.io/To-Do-List/create-account") { //change - to %20 (space)???
     document.getElementById("signUpSubmit").addEventListener("click", signUp);
 }
 else if (currentURL == "https://necroticphantom.github.io/To-Do-List/login") { //change - to %20 (space)???
