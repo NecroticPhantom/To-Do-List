@@ -1,6 +1,6 @@
-//local storage not working, popup alos being very weird
+//local storage not working, popup also being very weird
 //encrypt password before storing as it shows in URL (mabey encrypt all values)
-const userSignedIn = false;
+var userSignedIn = false;
 if (userSignedIn = false) {
     window.onload = accountManagement();
 };
