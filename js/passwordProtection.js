@@ -8,4 +8,4 @@ function encryptPassword() {
             passwordInput.password = hiddenPassword;
         });
     };
-};
+}; //fix this
