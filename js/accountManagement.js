@@ -77,9 +77,9 @@ document.addEventListener("DOMContentLoaded", function() {
     userAuth = document.getElementById("welcome").innerHTML;
 });
 if (userAuth !== "USER NOT SIGNED IN") {
-    const currentUser = userInfo.username;
-    const currentUserPassword = userInfo.password;
-    const currentUserEmail = userInfo.email;
+    const currentUser = JSON.parse(userInfo).username;
+    const currentUserPassword = JSON.parse(userInfo).password;
+    const currentUserEmail = JSON.parse(userInfo).email;
     document.getElementById("welcome").innerHTML = "Welcome " + currentUser;
     window.location.replace("http://necroticphantom.github.io/To-Do-List");
 }
