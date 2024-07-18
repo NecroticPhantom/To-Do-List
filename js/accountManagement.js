@@ -25,10 +25,14 @@ function accountManagement() { //make an account with admin privileges
     };
 };
 if (currentURL == "https://necroticphantom.github.io/To-Do-List/create-account") { //change - to %20 (space)???
-    window.onload = document.getElementById("signUpButton").addEventListener("click", signUp); //use DOMcontentloaded to fix errors
+    document.addEventListener("DOMContentLoaded", function() {
+    window.onload = document.getElementById("signUpButton").addEventListener("click", signUp);
+    });
 }
 else if (currentURL == "https://necroticphantom.github.io/To-Do-List/login") { //change - to %20 (space)???
-    window.onload = document.getElementById("loginButton").addEventListener("click", login); //use DOMcontentloaded to fix errors
+    document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("loginButton").addEventListener("click", login);
+    });
 };
 function validateEmail(testEmail) {
     return emailRegex.test(String(testEmail));
