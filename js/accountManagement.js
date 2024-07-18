@@ -35,7 +35,7 @@ function validateEmail(testEmail) {
 };
 function signUp() {
     signingUp = true
-    while (signingUp) { //make sure email is valid before adding newUserDetails and the rest of the while loop
+    while (signingUp) {
         let newEmail = document.getElementById("newEmailInput");
         let newUsername = docuemnt.getElementById("newUsernameInput");
         let newPassword = document.getElementById("newPasswordInput");
