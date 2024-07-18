@@ -1,4 +1,3 @@
-const currentURL = window.location;
 if (currentURL == "https://necroticphantom.github.io/To-Do-List/login" || currentURL == "https://necroticphantom.github.io/To-Do-List/create-account")
 window.onload = encryptPassword();
 function encryptPassword() {
