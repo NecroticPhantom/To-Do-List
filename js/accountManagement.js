@@ -51,7 +51,7 @@ function signUp() {
         };
     };
 };
-let userInfo;
+let userInfo = null;
 function login() {
     loggingIn = true;
     while (logginIn) {
