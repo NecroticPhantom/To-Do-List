@@ -1,6 +1,5 @@
 //local storage not working, popup also being very weird
 //encrypt password before storing as it shows in URL (mabey encrypt all values)
-document.getElementById("Welcome").innerHTML = "USER NOT SIGNED IN";
 var userSignedIn = false;
 if (userSignedIn = false) {
     window.onload = accountManagement();
