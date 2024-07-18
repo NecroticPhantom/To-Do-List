@@ -28,3 +28,12 @@ input[type=submit]:hover {
     height: 100px;
     width: auto;
 };
+.submitButton {
+    height: 20px;
+    width: 100px;
+    background-color: lightgray;
+};
+.submitText {
+    color: black;
+    text-align: center;
+};
