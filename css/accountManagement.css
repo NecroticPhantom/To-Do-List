@@ -22,4 +22,5 @@ input[type=submit]:hover {
 };
 .heading {
     color: black;
+    text-align: center;
 };
