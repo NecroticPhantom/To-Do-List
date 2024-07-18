@@ -1,15 +1,16 @@
 //local storage not working, popup also being very weird
 //encrypt password before storing as it shows in URL (mabey encrypt all values)
 const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const currentURL = window.location
 var userSignedIn = false;
-if (userSignedIn == false) {
+if (userSignedIn == false && currentURL == "https://necroticphantom.github.io/To-Do-List") {
     window.onload = accountManagement();
 };
 function accountManagement() { //make an account with admin privileges
     accountManaging = true;
     while (accountManaging) {
-        var existingUserOrNewUser = window.prompt("Login or Create Account? ");
-        var loginOrCreate = existingUserOrNewUser.toLowerCase();
+        var loginOrCreate = window.prompt("Login or Create Account? ");
+        var loginOrCreate = loginOrCreate.toLowerCase();
         if (loginOrCreate == "login") {
             accountManaging = false;
             window.location.replace("http://necroticphantom.github.io/To-Do-List/login"); //change - to %20 (space)???
@@ -23,7 +24,6 @@ function accountManagement() { //make an account with admin privileges
         };
     };
 };
-const currentURL = window.location
 if (currentURL == "https://necroticphantom.github.io/To-Do-List/create-account") { //change - to %20 (space)???
     document.getElementById("signUpSubmit").addEventListener("click", signUp);
 }
