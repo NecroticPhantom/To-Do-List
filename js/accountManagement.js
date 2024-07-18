@@ -71,6 +71,10 @@ function login() {
         };
     };
 };
+var userAuth;
+document.addEventListener("DOMContentLoaded", function() {
+    userAuth = document.getElementById("welcome").innerHTML;
+});
 userAuth = document.getElementById("Welcome").innerHTML;
 if (userAuth !== "USER NOT SIGNED IN") {
     userAuth = true;
