@@ -1,6 +1,6 @@
 //local storage not working, popup also being very weird
 //encrypt password before storing as it shows in URL (mabey encrypt all values)
-document.getElementById("Welcome").innerHTML = null;
+document.getElementById("Welcome").innerHTML = "USER NOT SIGNED IN";
 var userSignedIn = false;
 if (userSignedIn = false) {
     window.onload = accountManagement();
@@ -72,11 +72,16 @@ function login() {
         };
     };
 };
-var userAuth = document.getElementById("Welcome").innerHTML;
-if (userAuth != null) {
+userAuth = document.getElementById("Welcome").innerHTML;
+if (userAuth !== "USER NOT SIGNED IN") {
+    userAuth = true;
     const currentUser = userInfo.username;
     const currentUserPassword = userInfo.password;
     const currentUserEmail = userInfo.email;
     document.getElementById("Welcome").innerHTML = "Welcome " + currentUser;
     window.location.replace("http://necroticphantom.github.io/To-Do-List");
+}
+else {
+    window.alert("USER AUTHENTICATION FAILED");
+    accountManagement();
 };
