@@ -67,10 +67,11 @@ function login() {
         }
         else {
             loggingIn = false;
+            userAuth();
         };
     };
 };
-let userCheck = localstorage.getItem(username);
+var userCheck = localstorage.getItem(username);
 if (userCheck !== null) {
     const currentUser = userInfo.username;
     const currentUserPassword = userInfo.password;
