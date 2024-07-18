@@ -42,7 +42,7 @@ function signUp() {
         const currentUser = userInfo.username;
         const currentUserPassword = userInfo.password;
         const currentUserEmail = userInfo.email;
-        const userSignedIn = true;
+        var userSignedIn = true;
         window.location.replace("http://necroticphantom.github.io/To-Do-List");
     };
 };
@@ -73,9 +73,8 @@ function login() {
 };
 var userAuth;
 document.addEventListener("DOMContentLoaded", function() {
-    userAuth = document.getElementById("welcome").innerHTML;
+    userAuth = document.getElementById("Welcome").innerHTML;
 });
-userAuth = document.getElementById("Welcome").innerHTML;
 if (userAuth !== "USER NOT SIGNED IN") {
     userAuth = true;
     const currentUser = userInfo.username;
