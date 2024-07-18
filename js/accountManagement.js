@@ -3,7 +3,7 @@
 const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const currentURL = window.location
 var userSignedIn = false;
-if (userSignedIn == false && currentURL == "https://necroticphantom.github.io/To-Do-List") {
+if (userSignedIn == false && currentURL == "https://necroticphantom.github.io/To-Do-List/") {
     window.onload = accountManagement();
 };
 function accountManagement() { //make an account with admin privileges
