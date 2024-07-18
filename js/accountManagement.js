@@ -4,7 +4,7 @@ const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@
 const currentURL = window.location
 var userSignedIn = false;
 if (userSignedIn == false && currentURL == "https://necroticphantom.github.io/To-Do-List/") {
-    window.onload = accountManagement();
+    window.onload = accountManagement(); //change to onDOMcontentloaded
 };
 function accountManagement() { //make an account with admin privileges
     accountManaging = true;
