@@ -19,7 +19,7 @@ function accountManagement() { //make an account with admin privileges
             window.location.replace("http://necroticphantom.github.io/To-Do-List/create-account"); //change - to %20 (space)???
         }
         else {
-            windom.alert("INVALID INPUT");
+            window.alert("INVALID INPUT");
         };
     };
 };
