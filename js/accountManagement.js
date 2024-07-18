@@ -44,6 +44,8 @@ function signUp() {
             const newUser = JSON.stringify(userDetails);
             localstorage.setItem(newUsername, newUser);
             signingUp = false;
+            window.location.replace("http://necroticphantom.github.io/To-Do-List/create-account");
+            document.getElementById("loginSubmit").addEventListener("submit", login);
             login();
         }
         else {
