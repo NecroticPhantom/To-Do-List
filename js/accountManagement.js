@@ -75,4 +75,4 @@ function login() {
         };
     };
 };
-document.getElementById("Main Heading").innerHTML = "Welcome " + currentUser;
+document.getElementById("Welcome").innerHTML = "Welcome " + currentUser;
