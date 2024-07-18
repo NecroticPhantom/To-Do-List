@@ -67,12 +67,13 @@ function login() {
         }
         else {
             loggingIn = false;
-            const currentUser = userInfo.username;
-            const currentUserPassword = userInfo.password;
-            const currentUserEmail = userInfo.email;
-            const userSignedIn = true;
-            window.location.replace("http://necroticphantom.github.io/To-Do-List");
         };
     };
+};
+if (userInfo !== null) {
+    const currentUser = userInfo.username;
+    const currentUserPassword = userInfo.password;
+    const currentUserEmail = userInfo.email;
+    window.location.replace("http://necroticphantom.github.io/To-Do-List");
 };
 document.getElementById("Welcome").innerHTML = "Welcome " + currentUser;
