@@ -44,11 +44,7 @@ function signUp() {
             const newUser = JSON.stringify(userDetails);
             localstorage.setItem(newUsername, newUser);
             signingUp = false;
-            const currentUser = userInfo.username;
-            const currentUserPassword = userInfo.password;
-            const currentUserEmail = userInfo.email;
-            var userSignedIn = true;
-            window.location.replace("http://necroticphantom.github.io/To-Do-List");
+            login();
         }
         else {
             window.alert("INVALID EMAIL")
@@ -77,18 +73,19 @@ function login() {
         }
         else {
             loggingIn = false;
+            userSignedIn = true;
             document.getElementById("welcome").innerHTML = username;
         };
     };
 };
-if (userSignedIn = true) {
+if (userSignedIn == true) {
     var userAuth;
     document.addEventListener("DOMContentLoaded", function() {
         userAuth = document.getElementById("welcome").innerHTML;
     });
     if (userAuth !== "USER NOT SIGNED IN") {
         if (userInfo !== null) {
-            userInfoJS = JSON.parse(userInfo);
+            var userInfoJS = JSON.parse(userInfo);
             const currentUser = userInfoJS.username;
             const currentUserPassword = userInfoJS.password;
             const currentUserEmail = userInfoJS.email;
