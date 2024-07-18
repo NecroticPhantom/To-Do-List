@@ -2,7 +2,7 @@
 //encrypt password before storing as it shows in URL (mabey encrypt all values)
 const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 var userSignedIn = false;
-if (userSignedIn = false) {
+if (userSignedIn == false) {
     window.onload = accountManagement();
 };
 function accountManagement() { //make an account with admin privileges
