@@ -8,8 +8,8 @@ if (userSignedIn == false) {
 function accountManagement() { //make an account with admin privileges
     accountManaging = true;
     while (accountManaging) {
-        var loginOrCreate = window.prompt("Login or Create Account? ");
-        var loginOrCreate = loginOrCreate.toLowerCase();
+        var existingUserOrNewUser = window.prompt("Login or Create Account? ");
+        var loginOrCreate = existingUserOrNewUser.toLowerCase();
         if (loginOrCreate == "login") {
             accountManaging = false;
             window.location.replace("http://necroticphantom.github.io/To-Do-List/login"); //change - to %20 (space)???
