@@ -1,5 +1,6 @@
 //local storage not working, popup also being very weird
 //encrypt password before storing as it shows in URL (mabey encrypt all values)
+document.getElementById("Welcome").innerHTML = "Test";
 var userSignedIn = false;
 if (userSignedIn = false) {
     window.onload = accountManagement();
@@ -71,7 +72,7 @@ function login() {
         };
     };
 };
-var userAuth = document.getElementById("Welcome").textContent;
+var userAuth = document.getElementById("Welcome").innerHTML;
 if (userAuth != null) {
     const currentUser = userInfo.username;
     const currentUserPassword = userInfo.password;
