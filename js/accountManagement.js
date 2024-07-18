@@ -1,5 +1,5 @@
-//local storage not working, popup also being very weird
-//encrypt password before storing as it shows in URL (mabey encrypt all values)
+//local storage not working
+//encrypt password before storing???
 const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const currentURL = window.location
 var userSignedIn = false;
