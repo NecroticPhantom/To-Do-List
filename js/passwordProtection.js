@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", encryptPassword)
 function encryptPassword() {
-    while (currentURL == "https://necroticphantom.github.io/To-Do-List/login" || currentURL == "https://necroticphantom.github.io/To-Do-List/create-account")
+    while (currentURL == "https://necroticphantom.github.io/To-Do-List/login" || currentURL == "https://necroticphantom.github.io/To-Do-List/create-account") {
         const passwordInput = document.getElementById("myInput");
         passwordInput.addEventListener("keyup", (event) => {
             const password = event.target.value;
@@ -8,4 +8,4 @@ function encryptPassword() {
             passwordInput.password = hiddenPassword;
         });
     };
-}; //fix this
+};
