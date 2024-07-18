@@ -98,7 +98,7 @@ if (userSignedIn = true) {
         else {
             window.alert("USER DATA RETRIEVAL FAILED. RELOAD PAGE AND SIGN IN AGAIN");
         };
-    };
+    }
     else {
         window.alert("USER AUTHENTICATION FAILED");
         accountManagement();
