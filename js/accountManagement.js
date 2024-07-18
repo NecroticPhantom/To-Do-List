@@ -67,15 +67,15 @@ function login() {
         }
         else {
             loggingIn = false;
-            userAuth();
+            document.getElementById("Welcome").innerHTML = username;
         };
     };
 };
-var userCheck = localstorage.getItem(username);
-if (userCheck !== null) {
+var userAuth = document.getElementById("Welcome").innerHTML;
+if (userAuth == null) {
     const currentUser = userInfo.username;
     const currentUserPassword = userInfo.password;
     const currentUserEmail = userInfo.email;
+    document.getElementById("Welcome").innerHTML = "Welcome " + currentUser;
     window.location.replace("http://necroticphantom.github.io/To-Do-List");
 };
-document.getElementById("Welcome").innerHTML = "Welcome " + currentUser;
