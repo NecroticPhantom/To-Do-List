@@ -46,6 +46,7 @@ function signUp() {
         window.location.replace("http://necroticphantom.github.io/To-Do-List");
     };
 };
+let userInfo;
 function login() {
     loggingIn = true;
     while (logginIn) {
