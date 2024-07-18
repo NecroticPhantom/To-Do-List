@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function() {
     userAuth = document.getElementById("Welcome").innerHTML;
 });
 if (userAuth !== "USER NOT SIGNED IN") {
-    userAuth = true;
     const currentUser = userInfo.username;
     const currentUserPassword = userInfo.password;
     const currentUserEmail = userInfo.email;
