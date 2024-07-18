@@ -1,5 +1,6 @@
 //local storage not working, popup also being very weird
 //encrypt password before storing as it shows in URL (mabey encrypt all values)
+const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 var userSignedIn = false;
 if (userSignedIn = false) {
     window.onload = accountManagement();
@@ -29,21 +30,29 @@ if (currentURL == "https://necroticphantom.github.io/To-Do-List/create-account")
 else if (currentURL == "https://necroticphantom.github.io/To-Do-List/login") { //change - to %20 (space)???
     document.getElementById("loginSubmit").addEventListener("click", login);
 };
+function validateEmail(testEmail) {
+    return emailRegex.test(String(testEmail));
+};
 function signUp() {
     signingUp = true
     while (signingUp) { //make sure email is valid before adding newUserDetails and the rest of the while loop
         let newEmail = document.getElementById("newEmailInput");
         let newUsername = docuemnt.getElementById("newUsernameInput");
         let newPassword = document.getElementById("newPasswordInput");
-        const newUserDetails = {email: newEmail, username: newUsername, password: newPassword};
-        const newUser = JSON.stringify(userDetails);
-        localstorage.setItem(newUsername, newUser);
-        loggingIn = false;
-        const currentUser = userInfo.username;
-        const currentUserPassword = userInfo.password;
-        const currentUserEmail = userInfo.email;
-        var userSignedIn = true;
-        window.location.replace("http://necroticphantom.github.io/To-Do-List");
+        if (validateEmail(newEmail)) {
+            const newUserDetails = {email: newEmail, username: newUsername, password: newPassword};
+            const newUser = JSON.stringify(userDetails);
+            localstorage.setItem(newUsername, newUser);
+            signingUp = false;
+            const currentUser = userInfo.username;
+            const currentUserPassword = userInfo.password;
+            const currentUserEmail = userInfo.email;
+            var userSignedIn = true;
+            window.location.replace("http://necroticphantom.github.io/To-Do-List");
+        }
+        else {
+            window.alert("INVALID EMAIL")
+        };
     };
 };
 let userInfo;
