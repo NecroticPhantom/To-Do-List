@@ -4,7 +4,7 @@ function encryptPassword() {
         if (currentURL == "https://necroticphantom.github.io/To-Do-List/login") {
             var passwordInput = document.getElementById("newPasswordInput");
         }
-        else if {
+        else if (currentURL == "https://necroticphantom.github.io/To-Do-List/create-account") {
             var passwordInput = document.getElementById("password-input");
         };
         passwordInput.addEventListener("keyup", (event) => {
