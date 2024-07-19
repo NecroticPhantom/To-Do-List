@@ -61,14 +61,15 @@ function signUp() {
         };
     };
 };
-let userInfo = null;
+var userInfo = null;
 function login() {
     loggingIn = true;
     while (loggingIn) {
         let email = document.getElementById("email-input").value;
         let username = document.getElementById("username-input").value;
         let password = document.getElementById("password-input").value;
-        let userInfo = localStorage.getItem(username);
+        var userInfo = localStorage.getItem(username);
+        var userInfo = JSON.parse(userInfo);
         let usernameCheck = userInfo.username;
         let passwordCheck = userInfo.password;
         let emailCheck = userInfo.email;
@@ -101,7 +102,6 @@ if (userSignedIn == true) {
     });
     if (userAuth !== "USER NOT SIGNED IN") {
         if (userInfo !== null) {
-            var userInfoJS = JSON.parse(userInfo);
             const currentUser = userInfoJS.username;
             const currentUserPassword = userInfoJS.password;
             const currentUserEmail = userInfoJS.email;
