@@ -47,7 +47,7 @@ function signUp() {
         let newPassword = document.getElementById("newPasswordInput").value;
         if (validateEmail(newEmail)) {
             const newUserDetails = {email: newEmail, username: newUsername, password: newPassword};
-            const newUser = JSON.stringify(userDetails);
+            const newUser = JSON.stringify(newUserDetails);
             localstorage.setItem(newUsername, newUser);
             signingUp = false;
             window.location.replace("http://necroticphantom.github.io/To-Do-List/create-account");
