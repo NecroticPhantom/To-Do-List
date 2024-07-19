@@ -42,9 +42,9 @@ function validateEmail(testEmail) {
 function signUp() {
     signingUp = true
     while (signingUp) {
-        let newEmail = document.getElementById("newEmailInput");
-        let newUsername = document.getElementById("newUsernameInput");
-        let newPassword = document.getElementById("newPasswordInput");
+        let newEmail = document.getElementById("newEmailInput").value;
+        let newUsername = document.getElementById("newUsernameInput").value;
+        let newPassword = document.getElementById("newPasswordInput").value;
         if (validateEmail(newEmail)) {
             const newUserDetails = {email: newEmail, username: newUsername, password: newPassword};
             const newUser = JSON.stringify(userDetails);
@@ -65,9 +65,9 @@ let userInfo = null;
 function login() {
     loggingIn = true;
     while (logginIn) {
-        let email = document.getElementById("emailInput");
-        let username = document.getElementById("usernameInput");
-        let password = document.getElementById("passwordInput");
+        let email = document.getElementById("emailInput").value;
+        let username = document.getElementById("usernameInput").value;
+        let password = document.getElementById("passwordInput").value;
         let userInfo = localstorage.getItem(username);
         let usernameCheck = userInfo.username;
         let passwordCheck = userInfo.password;
