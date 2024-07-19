@@ -9,7 +9,7 @@ if (userSignedIn == false && currentURL == "https://necroticphantom.github.io/To
 function accountManagement() { //make an account with admin privileges
     accountManaging = true;
     while (accountManaging) {
-        var loginOrCreate = window.prompt("Login or Create Account? ");
+        var loginOrCreate = window.prompt("Login or Create Account? "); //add an if undefined option, telling user to reload the page
         var loginOrCreate = loginOrCreate.toLowerCase();
         if (loginOrCreate == "login") {
             accountManaging = false;
@@ -65,9 +65,9 @@ let userInfo = null;
 function login() {
     loggingIn = true;
     while (loggingIn) {
-        let email = document.getElementById("emailInput").value;
-        let username = document.getElementById("usernameInput").value;
-        let password = document.getElementById("passwordInput").value;
+        let email = document.getElementById("email-input").value;
+        let username = document.getElementById("username-input").value;
+        let password = document.getElementById("password-input").value;
         let userInfo = localStorage.getItem(username);
         let usernameCheck = userInfo.username;
         let passwordCheck = userInfo.password;
