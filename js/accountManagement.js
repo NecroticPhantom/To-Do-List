@@ -62,6 +62,19 @@ function signUp() {
     };
 };
 var userInfo = null;
+const currentUser = null;
+function signInEndstep() {
+    if (userSignedIn == true) {
+        if (userInfo !== null) {
+            const currentUser = userInfo.username;
+            window.location.replace("http://necroticphantom.github.io/To-Do-List");
+            onload = document.getElementById("welcome").innerHTML = "Welcome " + currentUser;
+        } 
+        else {
+            window.alert("USER DATA RETRIEVAL FAILED. RELOAD PAGE AND SIGN IN AGAIN");
+        };
+    };
+};
 function login() {
     loggingIn = true;
     while (loggingIn) {
@@ -92,19 +105,6 @@ function login() {
             loggingIn = false;
             userSignedIn = true;
             SignInEndstep();
-        };
-    };
-};
-const currentUser = null;
-function signInEndstep() {
-    if (userSignedIn == true) {
-        if (userInfo !== null) {
-            const currentUser = userInfo.username;
-            window.location.replace("http://necroticphantom.github.io/To-Do-List");
-            onload = document.getElementById("welcome").innerHTML = "Welcome " + currentUser;
-        } 
-        else {
-            window.alert("USER DATA RETRIEVAL FAILED. RELOAD PAGE AND SIGN IN AGAIN");
         };
     };
 };
