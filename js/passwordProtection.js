@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", encryptPassword);
+/*document.addEventListener("DOMContentLoaded", encryptPassword);
 var passwordInput;
 function encryptPassword() {
     while (currentURL == "https://necroticphantom.github.io/To-Do-List/login" || currentURL == "https://necroticphantom.github.io/To-Do-List/create-account") {
@@ -14,4 +14,4 @@ function encryptPassword() {
             passwordInput.password = hiddenPassword;
         });
     };
-};
+};*/ //WIP
