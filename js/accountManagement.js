@@ -99,8 +99,8 @@ if (userSignedIn == true) {
         const currentUser = userInfo.username;
         const currentUserPassword = userInfo.password;
         const currentUserEmail = userInfo.email;
-        document.getElementById("welcome").innerHTML = "Welcome " + currentUser;
         window.location.replace("http://necroticphantom.github.io/To-Do-List");
+        onload = document.getElementById("welcome").innerHTML = "Welcome " + currentUser;
     } 
     else {
         window.alert("USER DATA RETRIEVAL FAILED. RELOAD PAGE AND SIGN IN AGAIN");
