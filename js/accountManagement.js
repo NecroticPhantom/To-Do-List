@@ -26,7 +26,7 @@ function accountManagement() { //make an account with admin privileges
 };
 if (currentURL == "https://necroticphantom.github.io/To-Do-List/create-account") { //change - to %20 (space)???
     document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("signUpButton").addEventListener("click", signUp);
+        document.getElementById("createAccountButton").addEventListener("click", signUp);
     });
 }
 else if (currentURL == "https://necroticphantom.github.io/To-Do-List/login") { //change - to %20 (space)???
