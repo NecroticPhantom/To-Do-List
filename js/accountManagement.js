@@ -95,7 +95,7 @@ function login() {
         };
     };
 };
-const currentUser;
+const currentUser = null;
 function signInEndstep() {
     if (userSignedIn == true) {
         if (userInfo !== null) {
