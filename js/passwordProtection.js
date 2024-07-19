@@ -1,6 +1,6 @@
-/*document.addEventListener("DOMContentLoaded", encryptPassword);
+document.addEventListener("DOMContentLoaded", checkPage);
 var passwordInput;
-function encryptPassword() {
+function checkPage() {
     while (currentURL == "https://necroticphantom.github.io/To-Do-List/login" || currentURL == "https://necroticphantom.github.io/To-Do-List/create-account") {
         if (currentURL == "https://necroticphantom.github.io/To-Do-List/login") {
             var passwordInput = document.getElementById("newPasswordInput");
@@ -8,10 +8,13 @@ function encryptPassword() {
         else if (currentURL == "https://necroticphantom.github.io/To-Do-List/create-account") {
             var passwordInput = document.getElementById("password-input");
         };
-        passwordInput.addEventListener("keyup", (event) => {
-            const password = event.target.value;
-            const hiddenPassword = value.replace(/./g, "●");
-            passwordInput.password = hiddenPassword;
-        });
+        document.addEventListener("DOMContentLoaded", encryptPassword);
     };
-};*/ //WIP
+};
+function encryptPassword() {
+    passwordInput.addEventListener("keyup", (event) => {
+        const password = event.target.value;
+        const hiddenPassword = value.replace(/./g, "●");
+        passwordInput.password = hiddenPassword;
+    });
+};
