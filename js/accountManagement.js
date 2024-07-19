@@ -41,7 +41,7 @@ function signUp() {
     signingUp = true
     while (signingUp) {
         let newEmail = document.getElementById("newEmailInput");
-        let newUsername = docuemnt.getElementById("newUsernameInput");
+        let newUsername = document.getElementById("newUsernameInput");
         let newPassword = document.getElementById("newPasswordInput");
         if (validateEmail(newEmail)) {
             const newUserDetails = {email: newEmail, username: newUsername, password: newPassword};
