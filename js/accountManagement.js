@@ -25,12 +25,12 @@ function accountManagement() { //make an account with admin privileges
     };
 };
 if (currentURL == "https://necroticphantom.github.io/To-Do-List/create-account") { //change - to %20 (space)???
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", signUpEventListener() {
         document.getElementById("createAccountButton").addEventListener("click", signUp);
     });
 }
 else if (currentURL == "https://necroticphantom.github.io/To-Do-List/login") { //change - to %20 (space)???
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", loginEventListener() {
         document.getElementById("loginButton").addEventListener("click", login);
     });
 };
@@ -53,7 +53,9 @@ function signUp() {
             login();
         }
         else {
-            window.alert("INVALID EMAIL")
+            window.alert("INVALID EMAIL");
+            signingUp = false;
+            signUpEventListener();
         };
     };
 };
@@ -70,12 +72,18 @@ function login() {
         let emailCheck = userInfo.email;
         if (userInfo === null) {
             window.alert("INVALID USERNAME");
+            logginIn = false;
+            loginEventListener();
         }
         else if (password !== passwordCheck) {
             window.alert("INVALID PASSWORD");
+            logginIn = false;
+            loginEventListener();
         }
         else if (email !== emailCheck) {
             window.alert("INVALID EMAIL");
+            logginIn = false;
+            loginEventListener();
         }
         else {
             loggingIn = false;
