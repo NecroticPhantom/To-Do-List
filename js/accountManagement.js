@@ -91,29 +91,18 @@ function login() {
         else {
             loggingIn = false;
             userSignedIn = true;
-            document.getElementById("welcome").innerHTML = username;
         };
     };
 };
 if (userSignedIn == true) {
-    var userAuth;
-    document.addEventListener("DOMContentLoaded", function() {
-        userAuth = document.getElementById("welcome").innerHTML;
-    });
-    if (userAuth !== "USER NOT SIGNED IN") {
-        if (userInfo !== null) {
-            const currentUser = userInfoJS.username;
-            const currentUserPassword = userInfoJS.password;
-            const currentUserEmail = userInfoJS.email;
-            document.getElementById("welcome").innerHTML = "Welcome " + currentUser;
-            window.location.replace("http://necroticphantom.github.io/To-Do-List");
-        } 
-        else {
-            window.alert("USER DATA RETRIEVAL FAILED. RELOAD PAGE AND SIGN IN AGAIN");
-        };
-    }
+    if (userInfo !== null) {
+        const currentUser = userInfo.username;
+        const currentUserPassword = userInfo.password;
+        const currentUserEmail = userInfo.email;
+        document.getElementById("welcome").innerHTML = "Welcome " + currentUser;
+        window.location.replace("http://necroticphantom.github.io/To-Do-List");
+    } 
     else {
-        window.alert("USER AUTHENTICATION FAILED");
-        accountManagement();
+        window.alert("USER DATA RETRIEVAL FAILED. RELOAD PAGE AND SIGN IN AGAIN");
     };
 };
