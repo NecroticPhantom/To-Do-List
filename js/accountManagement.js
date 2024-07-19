@@ -104,7 +104,7 @@ function login() {
         else {
             loggingIn = false;
             userSignedIn = true;
-            SignInEndstep();
+            signInEndstep();
         };
     };
 };
