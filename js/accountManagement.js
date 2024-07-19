@@ -64,7 +64,7 @@ function signUp() {
 let userInfo = null;
 function login() {
     loggingIn = true;
-    while (logginIn) {
+    while (loggingIn) {
         let email = document.getElementById("emailInput").value;
         let username = document.getElementById("usernameInput").value;
         let password = document.getElementById("passwordInput").value;
