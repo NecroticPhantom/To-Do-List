@@ -65,7 +65,7 @@ var userInfo = null;
 const currentUser = null;
 function signInEndstep() {
     if (userSignedIn == true) {
-        if (userInfo !== null) {
+        if (userInfo != null) {
             const currentUser = userInfo.username;
             window.location.replace("http://necroticphantom.github.io/To-Do-List");
             onload = document.getElementById("welcome").innerHTML = "Welcome " + currentUser;
