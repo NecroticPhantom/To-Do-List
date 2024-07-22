@@ -2,7 +2,7 @@
 //replace visual password masking inputs with proper form and post method + hashing to fully secure data (this can wait as this is just a To-Do list website, securtiy isn't even neccessary)
 const emailRegex = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/i;
 const currentURL = window.location
-var userSignedIn = false;
+const userSignedIn = false;
 if (userSignedIn == false && currentURL == "https://necroticphantom.github.io/To-Do-List/") {
     window.onload = accountManagement(); //change to onDOMcontentloaded
 };
@@ -70,6 +70,7 @@ function signInEndstep() {
         var userInfo = JSON.parse(userInfo);
         if (userInfo != null) {
             const currentUser = userInfo.username;
+            const userSignedIn = true;
             window.location.replace("http://necroticphantom.github.io/To-Do-List");
             onload = document.getElementById("welcome").innerHTML = "Welcome " + currentUser;
         } 
@@ -79,7 +80,7 @@ function signInEndstep() {
     };
 };
 function login() {
-    loggingIn = true;
+    var loggingIn = true;
     while (loggingIn) {
         let email = document.getElementById("email-input").value;
         let username = document.getElementById("username-input").value;
@@ -105,8 +106,7 @@ function login() {
             loginEventListener();
         }
         else {
-            loggingIn = false;
-            userSignedIn = true;
+            var loggingIn = false;
             signInEndstep();
         };
     };
