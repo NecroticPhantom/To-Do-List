@@ -65,6 +65,8 @@ var userInfo = null;
 const currentUser = null;
 function signInEndstep() {
     if (userSignedIn == true) {
+        var userInfo = localStorage.getItem(username);
+        var userInfo = JSON.parse(userInfo);
         if (userInfo != null) {
             const currentUser = userInfo.username;
             window.location.replace("http://necroticphantom.github.io/To-Do-List");
