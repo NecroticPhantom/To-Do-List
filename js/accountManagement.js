@@ -65,6 +65,7 @@ var userInfo = null;
 const currentUser = null;
 function signInEndstep() {
     if (userSignedIn == true) {
+        let username = document.getElementById("username-input").value;
         var userInfo = localStorage.getItem(username);
         var userInfo = JSON.parse(userInfo);
         if (userInfo != null) {
